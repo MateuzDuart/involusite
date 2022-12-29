@@ -183,6 +183,25 @@ u {
 .botao:nth-child(2):hover {
     animation: btn 0.15s reverse ease-in forwards;
 }
+
+
+.container {
+    max-width: 720px;
+    margin: auto;
+}
+
+#video {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+iframe {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 .txt2 {
     text-align: center;
     margin: 70px 0 30px;
