@@ -15,8 +15,6 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    text-decoration: underline;
-    text-decoration-color: #ffb700;
     font-size: 20px;
 }
 
@@ -29,10 +27,15 @@ header ul {
     align-items: center;
     white-space: nowrap;
 }
-
-header ul li:hover {
-    cursor: pointer;
+header ul li a {
     color: #3a3838;
+    text-decoration-color: #ffb700;
+
+}
+
+header ul li:hover a {
+    color: #3a3838;
+    text-decoration-color: #ffb700;
 }
 
 header ul li:nth-child(-n + 4):before {
@@ -69,7 +72,7 @@ header ul li:hover::before, header ul li:hover::after {
 
 .txt1 {
     font-size: 40px;
-
+    font-weight: 400;
 }
 
 .spantxt {
@@ -120,8 +123,6 @@ u {
     gap: 20px;
 }
 .botao {
-    font-size: 20px;
-    font-weight: 500;
     border: 2px solid #ffb700;
     width: 243px;
     height: 60px;
@@ -133,6 +134,11 @@ u {
     justify-content: center;
     transition: 0.2s;
 
+}
+
+.botao h2, .txt2 {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .botao:hover {
@@ -207,9 +213,7 @@ iframe {
     margin: 30px 0 20px;
     font-size: 30px;
 }
-img {
-    margin: 10px 0;
-}
+
 .botao.wpp {
     margin: 20px 0 50px;
     background: conic-gradient(from 254deg at 65.84% 50%, #FFD774 0deg, rgba(255, 215, 116, 0) 360deg);
@@ -247,3 +251,86 @@ select {
     
 }
 
+
+/* Pagina de projeto  */
+
+
+.aviso {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px; 
+}
+
+.projeto {
+    position: relative;
+    width: 313px;
+    height: 474px;
+}
+
+.projeto img.papel {
+    position: absolute;
+    transform: translateX(-12px);
+    z-index: -1;
+    top: -14px;
+    filter: drop-shadow(4px 6px 6px black);
+}
+
+
+.projeto .verMais {
+    width: 100%;
+    height: 95px;
+    position: absolute;
+    top: 79%;
+    left: -11px;
+    z-index: 1;
+}
+
+.projeto img.papel-baixo {
+    width: 107%;
+    position: absolute;
+}
+
+.projeto .imagem {
+    /* background-color: gray; */
+    width: 95%;
+    height: 160px;
+    position: relative;
+    top: 150px;
+    right: -4px;
+    opacity: 0.94;
+}
+
+.projeto .imagem img {
+    width: 100%;
+    border: 3px solid whitesmoke;
+    border-radius: 10px 5px;
+}
+
+.projeto h2 {
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+.projeto p.desc {
+    position: relative;
+    top: 150px;
+    max-height: 22%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.verMais p {
+    position: absolute;
+    transform: translate(200%, 210%) rotate(352deg);
+    z-index: 1;
+}
