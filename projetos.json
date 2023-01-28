@@ -10,7 +10,9 @@
     "imagen": "./Imagens/involuinsta.png",
     "alt": "Landing page involuinsta",
     "titulo": "Landing page Involuinsta",
-    "descricao":"esse site é uma pagina focada na conversão e venda, ela redireciona o cliente direto para o whatsapp do vendedor"
+    "descricao":"esse site é uma pagina focada na conversão e venda, ela redireciona o cliente direto para o whatsapp do vendedor",
+    "site": "https://www.involuinsta.tk"
+
 },
 {
     "imagen": "endereço",
