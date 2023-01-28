@@ -1,14 +1,16 @@
 [{
     "imagen": "./Imagens/site-ilimitanet.jpg",
-    "alt": "texto para a indexação",
-    "titulo": "Landing page internet",
-    "descricao":"esse site foi construindo no formato de uma landing page para captar clientes para a venda de serviço de internet"
+    "alt": "Landing page ilimitanet",
+    "titulo": "Landing page Ilimitanet",
+    "descricao":"esse site foi construindo no formato de uma landing page para captar clientes para a venda de serviço de internet",
+    "site": "https://www.ilimitanet.tk"
+
 },
 {
-    "imagen": "endereço",
-    "alt": "texto para a indexação",
-    "titulo": "projeto 2",
-    "descricao":"hfgwdsgsdfghsgsgjhfsgdhfgsh"
+    "imagen": "./Imagens/involuinsta.png",
+    "alt": "Landing page involuinsta",
+    "titulo": "Landing page Involuinsta",
+    "descricao":"esse site é uma pagina focada na conversão e venda, ela redireciona o cliente direto para o whatsapp do vendedor"
 },
 {
     "imagen": "endereço",

@@ -274,6 +274,39 @@ select {
     position: relative;
     width: 313px;
     height: 474px;
+    transition: 0.5s;
+
+}
+.projeto.ativado {
+    position: fixed;
+    top: 10%;
+    left: 38.5%;
+    transition: 0.5s;
+    z-index: 2;
+    transform: scale(1.5) !important;
+    cursor: unset !important;
+}
+
+.projetos .fechar {
+    display: none;
+}
+
+.projetos .fechar.ativado {
+    width: 100vw;
+    height: 100vw;
+    background-color: #00000080;
+    position: fixed;
+    z-index: 2;
+    left: 0px;
+    top: 0;
+    display: block;
+}
+
+
+.projeto:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.5s;
 }
 
 .projeto img.papel {
@@ -309,6 +342,35 @@ select {
     opacity: 0.94;
 }
 
+.projeto.ativado .imagem {
+    width: 90%;
+    position: relative;
+    top: 100px;
+    opacity: 0.94;
+    margin: auto;
+}
+
+.projeto .selo {
+    display: none;
+}
+
+.projeto.ativado .selo {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: -17px;
+    right: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.projeto.ativado .selo:hover {
+    transition: 0.5s;
+    top: -13px;
+
+}
+
 .projeto .imagem img {
     width: 100%;
     border: 3px solid whitesmoke;
@@ -321,6 +383,13 @@ select {
     text-align: center;
 }
 
+.projeto.ativado h2 {
+    position: relative;
+    top: 90px;
+    text-align: center;
+    font-size: 1em;
+}
+
 .projeto p.desc {
     position: relative;
     top: 150px;
@@ -329,8 +398,36 @@ select {
     overflow: hidden;
 }
 
+.projeto.ativado p.desc {
+    position: relative;
+    top: 105px;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 0 8px;
+}
+
 .verMais p {
+    display: block;
     position: absolute;
     transform: translate(200%, 210%) rotate(352deg);
     z-index: 1;
+}
+
+.projeto.ativado .verMais p {
+    display: none;
+}
+
+.verMais a {
+    display: none;
+}
+
+.projeto.ativado .verMais a {
+    padding: 0 60px;
+    color: black;
+    display: block;
+    position: absolute;
+    transform: translate(45%, 200%) rotate(352deg);
+    z-index: 1;
+    font-size: 1em;
+    text-decoration: none;
 }
