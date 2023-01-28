@@ -8,6 +8,7 @@ body {
     overflow-x:hidden ;
 }
 header {
+    margin-bottom: 20px;
     width: 100%;
     height: 120px;
     background: linear-gradient(180deg, rgba(255, 215, 116, 0.70) 0%, rgba(255, 215, 116, 0) 89.06%);
@@ -256,8 +257,10 @@ select {
 
 
 .aviso {
+    padding: 0 10px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: clamp(13px, 120%, 1.5em);
+    margin-bottom: 50px;
 }
 
 
@@ -267,23 +270,19 @@ select {
     justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
-    gap: 50px; 
+    gap: 80px; 
 }
 
 .projeto {
     position: relative;
-    width: 313px;
+    width: 300px;
     height: 474px;
     transition: 0.5s;
 
 }
 .projeto.ativado {
-    position: fixed;
-    top: 10%;
-    left: 38.5%;
+    position: unset;
     transition: 0.5s;
-    z-index: 2;
-    transform: scale(1.5) !important;
     cursor: unset !important;
 }
 
@@ -292,8 +291,8 @@ select {
 }
 
 .projetos .fechar.ativado {
-    width: 100vw;
-    height: 100vw;
+    width: 120vw;
+    height: 120vh;
     background-color: #00000080;
     position: fixed;
     z-index: 2;
@@ -319,11 +318,11 @@ select {
 
 
 .projeto .verMais {
-    width: 100%;
+    width: 104%;
     height: 95px;
     position: absolute;
-    top: 79%;
-    left: -11px;
+    top: 79.3%;
+    left: -10px;
     z-index: 1;
 }
 
@@ -359,16 +358,28 @@ select {
     position: absolute;
     z-index: 1;
     top: -17px;
-    right: 22px;
+    right: 9px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
 
 }
 
 .projeto.ativado .selo:hover {
-    transition: 0.5s;
+    transition: 0.2s;
     top: -13px;
 
+}
+
+.containerProjeto.ativado {
+    height: 0;
+    width: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projeto .imagem img {

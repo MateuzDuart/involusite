@@ -85,17 +85,15 @@
         background-position-x: 97%;
     }
     header {
-        font-size: min(15px, 100%);
+        font-size: 1.2em;
     }
 
 }
 
 @media (max-width: 400px) {
-    header {
-        font-size: min(16px, 120%);
-    }
+
     header ul {
-        gap: 1px;
+        gap: 5px;
         padding: 0;
     }
     header li {
@@ -110,10 +108,4 @@
 
 
 
-}
-
-@media (max-width: 350px) {
-    header {
-        font-size: min(13px, 98%);
-    }
 }
