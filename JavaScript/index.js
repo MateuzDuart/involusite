@@ -22,7 +22,7 @@ function carregarProjetos() {
             var verMais = `<div class="verMais"><a href="${projeto.site}" target="_blank">Ver Site</a><img class="papel-baixo" src="Imagens/parte-baixo.png" alt="parte de baixo de um papiro" srcset=""></div>`
             }
             var projetoHTML = `<div class="containerProjeto"><div class="projeto" onclick="ativador(this)">
-                <img class="selo" src="imagens/https://raw.githubusercontent.com/MateuzDuart/involusite/main/Imagens/simbolo-de-selo-de-carta-real.png" alt="Selo de carta real" onclick="desativar(this)">
+                <img class="selo" src="https://raw.githubusercontent.com/MateuzDuart/involusite/main/Imagens/simbolo-de-selo-de-carta-real.png" alt="Selo de carta real" onclick="desativar(this)">
                 <img class="papel" src="Imagens/papel.svg" alt="Textura papel chique">
                 <div class="imagem"><img src="${projeto.imagen}" alt="${projeto.alt}"></div>
                 <h2>${projeto.titulo}</h2>
