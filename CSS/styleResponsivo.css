@@ -24,7 +24,7 @@
         font-size: min(24px, 100vw);
         position: fixed;
         bottom: -25px;
-        z-index: 2;
+        z-index: 4;z
     }
     .navegador {
         background-color: #fff !important;
