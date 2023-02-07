@@ -20,15 +20,36 @@
     <title>InvoluSite</title>
 </head>
 
-<body>
-    <header>
+<body onresize="ajustarNavegador()" onload="ajustarNavegador()">
+    <div class="degrade"></div>
+    <header class="navegador">
         <nav>
             <ul>
-                <li><a href="#">Fazer Orçamento</a></li>
-                <li><a href="">Melhorar Desempenho</a></li>
-                <li><a href="projetos.html">Modelos de Sites</a></li>
-                <li><a href="">Contato</a></li>
-                <li class="seta"><img src="Imagens/seta.svg" alt="seta ver mais do menu" class="menu"></li>
+                <li class="ativado">
+                    <a href="#">
+                        <span class="icone"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="texto">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icone"><ion-icon name="trending-up-outline"></ion-icon></ion-icon></span>
+                        <span class="texto">Desempenho</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icone"><ion-icon name="document-outline"></ion-icon></ion-icon></span>
+                        <span class="texto">Sites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icone"><ion-icon name="business-outline"></ion-icon></ion-icon></span>
+                        <span class="texto">Sobre</span>
+                    </a>
+                </li>
+                <div class="indicador"></div>
             </ul>
         </nav>
     </header>
@@ -45,7 +66,7 @@
             <div class="botao"><h2>Ver Modelos</h2></div>
         </div>
         <h1 class="txt2">Como um site pode aumentar o lucro do seu negócio</h1>
-        <div class="centralizar"><a href="#video"><img src="Imagens/seta.svg" alt="Seta Para o vídeo"></a></div>
+        <div class="centralizar"><a href="#video"><img src="/Imagens/seta.svg" alt="Seta Para o vídeo"></a></div>
         <div class="container">
             <div id="video"><iframe width="720" height="405" src="https://www.youtube.com/embed/kPIfW4jOCDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         </div>
@@ -77,7 +98,31 @@
     </main>
     
     
-    <script src="JavaScript/index.js"></script>
+    <script>
+        const todosElementos = document.querySelectorAll('nav ul li')
+
+function ativador() {
+    todosElementos.forEach((e) => {
+        e.classList.remove('ativado')
+        this.classList.add('ativado')
+    })
+
+}
+
+todosElementos.forEach((e) => {
+   e.addEventListener('click', ativador)
+})
+    function ajustarNavegador(){
+        var indicador = document.querySelector('.indicador')
+        var icone = document.querySelector('ion-icon')
+        var distancia = icone.getBoundingClientRect().x - ((icone.getBoundingClientRect().right - icone.getBoundingClientRect().left) / 2)
+        console.log(distancia)
+        indicador.style.left = `${distancia}px`
+    }
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
