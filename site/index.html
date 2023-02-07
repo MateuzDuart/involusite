@@ -19,44 +19,38 @@
     <title>Projetos</title>
 </head>
 
-<body onload="carregarProjetos()">
-    <header>
+<body onload="ajustarNavegador(), carregarProjetos() " onresize="ajustarNavegador()">
+    <header class="navegador">
         <nav>
-        <ul>
-            <li class="ativado">
-                <a href="#">
-                    <span class="icone"><ion-icon name="home-outline"></ion-icon></span>
-                    <span class="texto">Fazer Orçamento</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icone"><ion-icon name="person-outline"></ion-icon></span>
-                    <span class="texto">Melhorar Desempenho</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icone"><ion-icon name="chatbubbles-outline"></ion-icon></span>
-                    <span class="texto">Modelos de Sites</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icone"><ion-icon name="camera-outline"></ion-icon></span>
-                    <span class="texto">Sobre</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icone"><ion-icon name="settings-outline"></ion-icon></span>
-                    <span class="texto">Configuração</span>
-                </a>
-            </li>
-            <div class="indicador"></div>
-        </ul>
+            <ul>
+                <li>
+                    <a href="/index.html">
+                        <span class="icone"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="texto">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icone"><ion-icon name="trending-up-outline"></ion-icon></ion-icon></span>
+                        <span class="texto">Desempenho</span>
+                    </a>
+                </li>
+                <li class="ativado">
+                    <a href="#">
+                        <span class="icone"><ion-icon name="document-outline"></ion-icon></ion-icon></span>
+                        <span class="texto">Sites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icone"><ion-icon name="business-outline"></ion-icon></ion-icon></span>
+                        <span class="texto">Sobre</span>
+                    </a>
+                </li>
+                <div class="indicador"></div>
+            </ul>
         </nav>
-    </header>
+    </header>   
     <section class="projetos">
         <h1>Modelos de Sites Construidos Por Mim</h1>
         <p class="aviso">Esse layouts são apenas exemplos de sites que eu já construi, caso sejá preciso nós podemos
@@ -69,6 +63,8 @@
         </div>
     </section>
     <script src="/JavaScript/site/carregar-projetos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

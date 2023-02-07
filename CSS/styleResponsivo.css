@@ -23,8 +23,8 @@
         background-color: unset !important;
         font-size: min(24px, 100vw);
         position: fixed;
-        top: 90%;
-        z-index: 1;
+        bottom: -25px;
+        z-index: 2;
     }
     .navegador {
         background-color: #fff !important;
