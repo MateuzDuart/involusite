@@ -49,7 +49,6 @@
                         <span class="texto">Sobre</span>
                     </a>
                 </li>
-                <div class="indicador"></div>
             </ul>
         </nav>
     </header>
@@ -97,21 +96,18 @@
         </div>
     </main>
     
-    
     <script>
         const todosElementos = document.querySelectorAll('nav ul li')
-
-function ativador() {
-    todosElementos.forEach((e) => {
+        function ativador() {
+        todosElementos.forEach((e) => {
         e.classList.remove('ativado')
         this.classList.add('ativado')
     })
 
 }
-
-todosElementos.forEach((e) => {
-   e.addEventListener('click', ativador)
-})
+        todosElementos.forEach((e) => {
+        e.addEventListener('click', ativador)
+        })
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

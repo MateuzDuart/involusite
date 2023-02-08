@@ -19,20 +19,17 @@
         font-size: 20px;
     }
 
-    header {
-        background-color: unset !important;
-        font-size: min(24px, 100vw);
-        position: fixed;
-        bottom: -25px;
-        z-index: 4;
-        border-radius: 20px 20px 0 0  ;
-    }
     .navegador {
         background-color: #fff !important;
         height: 70px;
         width: 100%;
         justify-content: center;
         align-items: center;
+        font-size: min(24px, 100vw);
+        position: fixed;
+        bottom: -20px;
+        z-index: 4;
+        border-radius: 20px 20px 0 0  ;
     }
     .navegador nav {
         width: 100%;
@@ -94,17 +91,27 @@
     }
     
     header li.ativado span.icone{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         max-height: 70px;
         max-width: 70px;
-        width: 20vw;
-        height: 20vW;
+        width: 17vw;
+        height: 17vW;
         background-color: rgb(251 200 74);
         border-radius: 100%;
         transition: 0.5s;
     }
 
 }
-
+@media (max-width: 611px) {
+    .txt1 {
+        font-size: 35px;
+    }
+    .centralizarTxt {
+        width: 100%;
+    }
+}
 @media (max-width: 500px) {
     .txt1 {
         font-size: 27px; 
@@ -123,9 +130,6 @@
     select {
         background-position-x: 97%;
     }
-    header {
-        font-size: 1.2em;
-    }
     
 }
 @media (max-width: 440px) {
@@ -136,6 +140,10 @@
 
 }
 @media (max-width: 400px) {
+    .navegador ul li a .icone {
+        font-size: 1.3em;
+
+    }
 
     header ul {
         gap: 5px;
