@@ -24,7 +24,8 @@
         font-size: min(24px, 100vw);
         position: fixed;
         bottom: -25px;
-        z-index: 4;z
+        z-index: 4;
+        border-radius: 20px 20px 0 0  ;
     }
     .navegador {
         background-color: #fff !important;
@@ -32,7 +33,6 @@
         width: 100%;
         justify-content: center;
         align-items: center;
-        border-radius: 10px; 
     }
     .navegador nav {
         width: 100%;
@@ -93,69 +93,15 @@
     
     }
     
-    .navegador ul .indicador {
-        position: absolute;
+    header li.ativado span.icone{
         max-height: 70px;
         max-width: 70px;
         width: 20vw;
         height: 20vW;
         background-color: rgb(251 200 74);
         border-radius: 100%;
-        top: -55%;
-        border: 6px solid var(--clr);
         transition: 0.5s;
-        left: 0;
     }
-    
-
-    
-    .navegador ul li:nth-child(1).ativado ~ .indicador {
-        transform: translateX(calc(70px * 0));
-    }
-    
-    .navegador ul li:nth-child(2).ativado ~ .indicador {
-        transform: translateX(calc(145% * 1));
-    }
-    
-    .navegador ul li:nth-child(3).ativado ~ .indicador {
-        transform: translateX(calc(145% * 2));
-    }
-    
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(145% * 3));
-    }
-    
-    main {
-        margin-bottom: 100px    ;
-    }
-    
-}
-
-
-@media (max-width: 611px) {
-    .txt1 {
-        font-size: 35px;
-    }
-    .centralizarTxt {
-        width: 100%;
-    }
-
-    header {
-        font-size: min(19px, 100vw);
-    }
-
-    .navegador ul li:nth-child(2).ativado ~ .indicador {
-        transform: translateX(calc(125% * 1));
-    }
-    
-    .navegador ul li:nth-child(3).ativado ~ .indicador {
-        transform: translateX(calc(135% * 2));
-    }
-    
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(140% * 3));
-    }
-    
 
 }
 
@@ -180,41 +126,14 @@
     header {
         font-size: 1.2em;
     }
-
-    .navegador ul li:nth-child(2).ativado ~ .indicador {
-        transform: translateX(calc(135% * 1));
-    }
-    
-    .navegador ul li:nth-child(3).ativado ~ .indicador {
-        transform: translateX(calc(140% * 2));
-    }
-    
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(140% * 3));
-    }
     
 }
 @media (max-width: 440px) {
     
-    .navegador ul li:nth-child(2).ativado ~ .indicador {
-        transform: translateX(calc(130% * 1));
-    }
-    .navegador ul li:nth-child(3).ativado ~ .indicador {
-        transform: translateX(calc(132.5% * 2));
-    }
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(135% * 3));
-    }
     
 }
 @media (max-width: 420px) {
-    .navegador ul .indicador {
-        top: -50%;
 
-    }
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(130% * 3));
-    }
 }
 @media (max-width: 400px) {
 
@@ -231,37 +150,12 @@
     .txt1 {
         font-size: 24px;
     }
-    .navegador ul li:nth-child(2).ativado ~ .indicador {
-        transform: translateX(calc(115% * 1));
-    }
     
-    .navegador ul li:nth-child(3).ativado ~ .indicador {
-        transform: translateX(calc(115% * 2));
-    }
-    
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(125% * 3));
-    }
-    
-
-
 }
 @media (max-width: 380px) {
-    .navegador ul li:nth-child(2).ativado ~ .indicador {
-        transform: translateX(calc(105% * 1));
-    }
-    
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(115% * 3));
-    }
+
 }
 
 @media (max-width: 370PX) {
     
-    .navegador ul li:nth-child(3).ativado ~ .indicador {
-        transform: translateX(calc(110% * 2));
-    }
-    .navegador ul li:nth-child(4).ativado ~ .indicador {
-        transform: translateX(calc(110% * 3));
-    }
 }

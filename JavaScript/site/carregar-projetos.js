@@ -58,24 +58,3 @@ function desativar(e=false) {
     
 }
 
-
-const todosElementos = document.querySelectorAll('nav ul li')
-
-function ativador() {
-    todosElementos.forEach((e) => {
-        e.classList.remove('ativado')
-        this.classList.add('ativado')
-    })
-
-}
-
-todosElementos.forEach((e) => {
-   e.addEventListener('click', ativador)
-})
-    function ajustarNavegador(){
-        var indicador = document.querySelector('.indicador')
-        var icone = document.querySelector('ion-icon')
-        var distancia = icone.getBoundingClientRect().x - ((icone.getBoundingClientRect().right - icone.getBoundingClientRect().left) / 2)
-        console.log(distancia)
-        indicador.style.left = `${distancia}px`
-    }
