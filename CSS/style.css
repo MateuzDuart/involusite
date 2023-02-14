@@ -83,27 +83,17 @@ header li.seta {
 }
 
 .txt1 {
-    font-size: 40px;
+    font-size: 39px;
     font-weight: 500;
 }
 
 .spantxt {
-    width: 0px;
     display: block;
     overflow: hidden;
+}
+
+.txt3 {
     white-space: nowrap;
-    animation: escrever 2s steps(40) forwards, piscar 1.7s ease-in-out forwards;
-}
-
-.spantxt.txt3 {
-    border-right: 1px solid black;
-}
-
-.spantxt.txt4 {
-    animation-delay: 2s;
-}
-.spantxt.txt5 {
-    animation-delay: 2.2s;
 }
 
 u {
@@ -116,24 +106,35 @@ u {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding: 20px 0;
+    background-color: #bd983f;;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 50%);
 }
-
 .qualidade {
     display: flex;
-    background: linear-gradient(90deg, rgba(255, 215, 116, 0.70) 0%, rgba(255, 215, 116, 0) 50%);
+    background: linear-gradient(90deg, rgba(255, 215, 116, 0.70) 0%, rgb(240 238 233) 80%);
     min-height: 200px;
     flex-direction: column;
     justify-content: center;
     border-radius: 25px;
+    font-size: 1.1em;
 
 }
 
 .qualidade.direita {
-    background: linear-gradient(270deg, rgba(255, 215, 116, 0.70) 0%, rgba(255, 215, 116, 0) 50%);
+    background: linear-gradient(270deg, rgba(255, 215, 116, 0.70) 0%, rgb(240 238 233) 80%);
     text-align: end;
 
 }
-.qualidade h2 {
+
+#qualidades h2 {
+    text-align: center;
+    color: #36351c;
+    margin: 0 0 10px 0;
+}
+
+.qualidade h3 {
     color: #36351c;
     margin:10px 0;
 }
@@ -149,28 +150,45 @@ u {
     flex-direction: row-reverse;
 }
 
-
 .gap {
     width: 40%;
 }
 
-@keyframes escrever {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 100%;
-    }
+#teste {
+    padding: 20px 0;
+    color: #3a3918;
+    text-align: left;
+    border-radius: 60px;
+    box-shadow: -2px 10px 20px rgb(0 0 0 / 50%);
+    letter-spacing: 1px;
+    font-size: 1.2em;
 }
 
-@keyframes piscar {
-    from {
-        border-right: 1px solid black;
-    }
-    to {
-        border-right: 1px solid rgba(0, 0, 0, 0);
-    } 
+#teste h2, #teste h3, #teste p, #teste a {
+    margin: 0 0 30px;
+    padding: 0 15%;
+}
+
+
+#teste p {
+    color: #35341f;
+}
+
+#teste a {
+    text-decoration-color: #ffb700;
+    color: #35341f;
+    text-decoration-style: wavy;
+    display: block;
+}
+
+#teste img {
+    margin: 0 auto 30px auto ;
+    display: block;
+    width: clamp(300px, 60vw, 550px);
+    min-width: 300px;
+}
+#teste img.pesquisas{
+    width: clamp(300px, 60vw, 700px);
 }
 .centralizar {
     display: flex;
