@@ -52,7 +52,7 @@
         z-index: 1;
     }
     
-    header li.ativado{
+    header li.navAtivado{
         background: unset;
     }
 
@@ -76,7 +76,7 @@
         transition: 0.5s;
     }
     
-    .navegador ul li.ativado a .icone {
+    .navegador ul li.navAtivado a .icone {
         transform: translateY(-35px);
     }
     
@@ -88,13 +88,13 @@
         opacity: 0;
     }
     
-    .navegador ul li.ativado a .texto{
+    .navegador ul li.navAtivado a .texto{
         opacity: 1;
         transform: translateY(10px);
     
     }
     
-    header li.ativado span.icone{
+    header li.navAtivado span.icone{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -147,9 +147,14 @@
     #questionario h2, #questionario h3, #questionario label {
         padding: 0 10px;
     }
-    #teste {
+    #teste, #questionario {
     border-radius: 30px;
+    }
+    .resposta p {
+        width: unset ;
+        padding: 20px 10px;
 
+    
     }
     
 }

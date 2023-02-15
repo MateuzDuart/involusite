@@ -35,7 +35,7 @@ header li {
     padding: 0 10px;
 
 }
-header li.ativado {
+header li.navAtivado {
     height: 100%;
     display: flex;
     align-items: center;
@@ -220,10 +220,46 @@ u {
     min-height: 20px;
 }
 
+.resposta p {
+    width: 70%;
+    margin: 30px auto;
+    animation: aparecer 0.8s;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.resposta .negado {
+    color: #fff;
+    background-color: #e32b2b;
+}
+
+.resposta .atencao {
+    color: #3a3918;
+    background-color: #ffcb45;
+}
+
+.resposta .aceito {
+    color: #fff;
+    background-color: rgb(68 175 68);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
 .centralizar {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+
 }
 .botao {
     border: 2px solid #ffb700;
@@ -244,7 +280,7 @@ u {
     font-weight: 500;
 }
 
-.botao:hover {
+.botao:not(.desativado):hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: 0.2s;
@@ -285,6 +321,7 @@ u {
     }
 }
 
+
 .botao:nth-child(2) {
     background: linear-gradient(9deg, rgba(251, 227, 168, 0) 33%, #FBE3A8 100%);
     filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0.25));
@@ -310,18 +347,19 @@ main {
     margin-bottom: 70px;
 }
 
-.botao.wpp {
-    margin: 20px 0 50px;
+.botao.qst {
     background: conic-gradient(from 254deg at 65.84% 50%, #FFD774 0deg, rgba(255, 215, 116, 0) 360deg);
     filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.25));
 }
 
-.botao.orcmt {
-    margin: 20px auto 0;
+.botao.wpp {
     background: conic-gradient(from 224.54deg at 69.46% 51.11%, #FFD774 0deg, rgba(255, 215, 116, 0) 360deg);
     filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.25));
 }
 
+.desativado {
+    filter: grayscale(1) !important;
+}
 
 /* Pagina de projeto  */
 
