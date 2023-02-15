@@ -154,7 +154,7 @@ u {
     width: 40%;
 }
 
-#teste {
+#teste, #questionario {
     padding: 20px 0;
     color: #3a3918;
     text-align: left;
@@ -190,6 +190,36 @@ u {
 #teste img.pesquisas{
     width: clamp(300px, 60vw, 700px);
 }
+
+#questionario {
+    margin: 50px 0;
+}
+
+#questionario h2, #questionario h3 {
+    margin: 0 0 30px;
+    padding: 0 15%;
+}
+
+#questionario h2 {
+    text-align: center;
+}
+
+#questionario label {
+    display: block;
+    padding: 0 15%;
+    margin: 0 0 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+
+}
+
+#questionario label input {
+    min-width: 20px;
+    min-height: 20px;
+}
+
 .centralizar {
     display: flex;
     justify-content: center;
@@ -264,7 +294,6 @@ u {
 }
 
 
-
 iframe {
     top: 0;
     width: 100%;
@@ -291,22 +320,6 @@ main {
     margin: 20px auto 0;
     background: conic-gradient(from 224.54deg at 69.46% 51.11%, #FFD774 0deg, rgba(255, 215, 116, 0) 360deg);
     filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.25));
-}
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 100%;
-    border-radius: 10px;
-    height: 40px;
-    margin: 10px 0;
-    background: url(../Imagens/seta.svg) no-repeat center #fcdd8e;
-    background-size: 30px;
-    background-position-x: 350px;
-    padding: 10px;
-    font-size: 14px;
-    
 }
 
 

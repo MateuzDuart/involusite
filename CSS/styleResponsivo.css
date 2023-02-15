@@ -144,6 +144,9 @@
     #teste h2, #teste h3, #teste p, #teste a {
         padding: 0 10px;
     }
+    #questionario h2, #questionario h3, #questionario label {
+        padding: 0 10px;
+    }
     #teste {
     border-radius: 30px;
 
