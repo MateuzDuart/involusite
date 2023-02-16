@@ -153,8 +153,11 @@
     .resposta p {
         width: unset ;
         padding: 20px 10px;
-
-    
+    }
+    #questionario input[type=text] {
+        margin: 0 10px;
+        display: block;
+        height: 25px;
     }
     
 }

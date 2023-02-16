@@ -215,6 +215,16 @@ u {
 
 }
 
+#questionario label[for=nome], #questionario label[for=sobrenome] {
+    margin: 0;
+}
+
+#questionario input[type=text] {
+    margin: 0 75% 10px 15%;;
+    display: block;
+    height: 25px;
+}
+
 #questionario label input {
     min-width: 20px;
     min-height: 20px;
@@ -261,6 +271,13 @@ u {
     flex-wrap: wrap;
 
 }
+
+.centralizar a {
+    color: black;
+    text-decoration: none;
+
+}
+
 .botao {
     border: 2px solid #ffb700;
     width: 243px;
@@ -555,4 +572,19 @@ main {
     z-index: 1;
     font-size: 1em;
     text-decoration: none;
+}
+
+/* Pagina melhorias */
+
+.melhorias img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+}
+.melhorias h1 {
+    font-size: 1.5em;
+}
+.melhorias h1, .melhorias p {
+    text-align: center;
 }

@@ -98,10 +98,19 @@ function EnviarDados() {
             }
         }        
     )
-    var totFuncionarios = selecionado["funcionarios"].value
-    var investimento = selecionado["investimento"].value
-    var botoes = document.querySelector('#questionario .centralizar')
-    var servicos = []
+    var formularioCompleto = false
+    try {
+            var totFuncionarios = selecionado["funcionarios"].value
+            var investimento = selecionado["investimento"].value
+            var botoes = document.querySelector('#questionario .centralizar')
+            var servicos = []
+            selecionado["servicos"].forEach((e) => {
+                servicos.push(e.value)})
+            formularioCompleto = true
+    } catch {
+        formularioCompleto = false
+    }
+    
     function aceitar() {
         botoes.innerHTML = '<div class="botao qst desativado"><span>Enviar Respostas</span></div><div class="botao"><span>Whatsapp</span></div>'
 
@@ -116,15 +125,14 @@ function EnviarDados() {
         resposta.innerHTML = '<p class="negado">Infelizmente não estamos aptos a trabalhar juntos no momento, mas não desanime, acredite no seu potencial, estarei aqui lhe aguardando para futuras parcerias.</p>'
         
     }
-    selecionado["servicos"].forEach((e) => {
-    servicos.push(e.value)})
     var resposta = document.querySelector('.resposta')
-   console.log(servicos.length)
-    if (servicos.length == 2 && investimento == 'menos de 100' ){
+
+    if (formularioCompleto) {
+        if (servicos.length == 2 && investimento == 'menos de 100' ){
         negar()
-    } else if (servicos.length >= 3 && investimento == '100 a 400' ) {
-        atencao()
-    } else {
+        } else if (servicos.length >= 3 && investimento == '100 a 400' ) {
+            atencao()
+        } else {
         if (totFuncionarios == "1") {
             if (investimento == 'menos de 100') {
                 if (servicos.indexOf('criacao site') != -1) {
@@ -340,6 +348,10 @@ function EnviarDados() {
                 }
             }
         }
+        }
+    } else {
+        resposta.innerHTML = '<p class="negado">Por favor complete todo o formulario</p>'
+        
     }
 
 
