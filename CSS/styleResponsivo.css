@@ -6,7 +6,6 @@
 }
 
 @media (max-width: 800px) {
-    
     .centralizarTxt {
         margin: 30px auto;
     }
@@ -22,7 +21,6 @@
         font-weight: 600;
         font-size: 20px;
     }
-
     .navegador {
         background-color: #fff !important;
         height: 70px;

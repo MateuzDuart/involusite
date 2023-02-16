@@ -407,7 +407,6 @@ main {
     width: 300px;
     height: 474px;
     transition: 0.5s;
-
 }
 .projeto.ativado {
     position: unset;
@@ -534,7 +533,7 @@ main {
 .projeto p.desc {
     position: relative;
     top: 150px;
-    max-height: 22%;
+    max-height: 18%;
     text-align: center;
     overflow: hidden;
     padding: 0 8px;

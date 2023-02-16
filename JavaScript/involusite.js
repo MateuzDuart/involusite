@@ -100,25 +100,55 @@ function EnviarDados() {
     )
     var formularioCompleto = false
     try {
+            var nome = document.querySelector('#nome').value
+            var sobreNome = document.querySelector('#sobrenome').value
             var totFuncionarios = selecionado["funcionarios"].value
             var investimento = selecionado["investimento"].value
             var botoes = document.querySelector('#questionario .centralizar')
             var servicos = []
             selecionado["servicos"].forEach((e) => {
                 servicos.push(e.value)})
-            formularioCompleto = true
+            if (nome.length != 0 && sobrenome.length != 0){formularioCompleto = true}
+
+            if (totFuncionarios == '1') {
+                var msmfuncio = "1 funcionario"
+            } else {
+                var msmfuncio = `de ${totFuncionarios} funcionario`
+            }
+            var msmservico = ''
+            if (servicos.length >= 2){ 
+                if (servicos.indexOf('criacao site') != -1) {
+                    msmservico += 'Criar um site, '
+                } if (servicos.indexOf('criacao logo, ') != -1){
+                    msmservico += 'Criar uma logo'
+                }  if (servicos.indexOf('SEO site') != -1){
+                    msmservico += 'Melhorar o SEO, '
+                } if (servicos.indexOf('melhoria/ajustes site') != -1){
+                    msmservico += 'Melhorar o designer ou ajeitar uma coisa no site, '
+                }
+            } else {
+                if (servicos.indexOf('criacao site') != -1) {
+                    msmservico = 'Criar um site,'
+                } else if (servicos.indexOf('criacao logo, ') != -1){
+                    msmservico = 'Criar uma logo,'
+                } else if (servicos.indexOf('SEO site') != -1){
+                    msmservico = 'Melhorar o SEO, '
+                } else if (servicos.indexOf('melhoria/ajustes site') != -1){
+                    msmservico = 'Melhorar o designer ou ajeitar uma coisa no site, '
+                }
+            }
+                            
+            var linkWpp = `https://api.whatsapp.com/send?phone=5581986437864&text=ol%C3%A1,%20eu%20me%20chamo%20${nome}%20${sobreNome},%20minha%20empresa%20tem%20${msmfuncio}%20,%20e%20eu%20gostaria%20de%20${msmservico}%20e%20tenho%20${investimento}%20Reais%20para%20investir.`
     } catch {
         formularioCompleto = false
     }
     
     function aceitar() {
-        botoes.innerHTML = '<div class="botao qst desativado"><span>Enviar Respostas</span></div><div class="botao"><span>Whatsapp</span></div>'
-
+        botoes.innerHTML = `<div class="botao qst desativado"><span>Enviar Respostas</span></div><a href="${linkWpp}" rel="nofollow" target="blank_"><div class="botao"><span>Whatsapp</span></div></a>`
         resposta.innerHTML = '<p class="aceito">Olá, estou muito animado de ter você aqui, nossa parceria já está parcialmente acordada, eu liberei um botão que te levara direto para meu WhatsApp, por favor aperte nele para me enviar esses seus dados, logo logo estarei lhe respondendo para você me falar mais sobre seu projeto</p>'
-        
     }
     function atencao() {
-        botoes.innerHTML = '<div class="botao qst desativado"><span>Enviar Respostas</span></div><div class="botao"><span>Whatsapp</span></div>'
+        botoes.innerHTML = `<div class="botao qst desativado"><span>Enviar Respostas</span></div><a href="${linkWpp}" rel="nofollow" target="blank_"><div class="botao"><span>Whatsapp</span></div></a>`
         resposta.innerHTML = '<p class="atencao">Seu projeto parece interessante, você está pre-qualificado, estarei liberando logo abaixo um botão para você esta me enviando essas suas informações no WhatsApp, lá poderemos falar mais sobre seu projeto e ver se conseguimos fechar um acordo</p>'        
     }
     function negar() {
@@ -359,5 +389,5 @@ function EnviarDados() {
 }
 
 try {document.querySelector('.qst').addEventListener('click', EnviarDados)} catch {
-    
+
 }
