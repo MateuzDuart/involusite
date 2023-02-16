@@ -358,4 +358,6 @@ function EnviarDados() {
     
 }
 
-document.querySelector('.qst').addEventListener('click', EnviarDados)
+try {document.querySelector('.qst').addEventListener('click', EnviarDados)} catch {
+    
+}
